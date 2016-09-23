@@ -1,7 +1,6 @@
 .DS_Store
-.build/
 .uploads/
-.plugins/
+dist/
 node_modules/
 *.sublime-project
 logs
