@@ -6,9 +6,7 @@
   "engine": "node 4.5.0",
   "dependencies": {
     "express": "4.14.0",
-    "install": "0.8.1",
     "ms": "0.7.1",
-    "npm": "3.10.8",
     "nunjucks": "2.5.2"
   },
   "devDependencies": {
