@@ -1,0 +1,27 @@
+<div class="page-footer">
+   <div class="left">&copy; 2015 {{ vendor.name }}</div>
+
+   <div class="right social-media">
+      {% if vendor.social.facebook %}
+         <a href="http://facebook.com/{{ vendor.social.facebook }}" target="_blank">
+            <i class="icon ion-social-facebook"></i>
+         </a>
+      {% endif %}
+
+      {% if vendor.social.twitter %}
+         <a href="http://twitter.com/{{ vendor.social.twitter }}" target="_blank">
+            <i class="icon ion-social-twitter"></i>
+         </a>
+      {% endif %}
+
+      {% if vendor.social.instagram %}
+         <a href="http://instagram.com/{{ vendor.social.instagram }}" target="_blank">
+            <i class="icon ion-social-instagram"></i>
+         </a>
+      {% endif %}
+
+      <a href="https://1000foodies.com" class="foodies">
+         <img src="/assets/images/logo.png" alt="">
+      </a>
+   </div>
+</div>

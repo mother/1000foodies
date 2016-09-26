@@ -1,0 +1,44 @@
+<div class="vendor-cover">
+   <div class="vendor-cover-photo" style="background-image: url(/assets/images/{{ vendor.splash }})">
+      <div class="vendor-cover-shadow"></div>
+   </div>
+
+   <div class="vendor-cover-social">
+      {% if vendor.social.facebook %}
+         <a href="http://facebook.com/{{ vendor.social.facebook }}" target="_blank">
+            <i class="icon ion-social-facebook"></i>
+         </a>
+      {% endif %}
+
+      {% if vendor.social.twitter %}
+         <a href="http://twitter.com/{{ vendor.social.twitter }}" target="_blank">
+            <i class="icon ion-social-twitter"></i>
+         </a>
+      {% endif %}
+
+      {% if vendor.social.instagram %}
+         <a href="http://instagram.com/{{ vendor.social.instagram }}" target="_blank">
+            <i class="icon ion-social-instagram"></i>
+         </a>
+      {% endif %}
+   </div>
+
+   <a href="https://1000foodies.com" class="foodies-logo">
+      <img src="/assets/images/logo.png" alt="">
+   </a>
+</div>
+
+<div class="page-headline clearfix">
+   <h2>{{ vendor.subtitle }}</h2>
+   <div class="subtitle">
+      <div class="c100">
+         <div class="anchor"></div>
+      </div>
+      {% if vendor.description %}
+         {{ vendor.description|truncate(180) }}
+      {% else %}
+         Welcome to your own shop.  Login to get started. You'll be able to add content begin selling products, no problem.
+      {% endif %}
+   </div>
+   <a class="action-goto-products vendor-cover-btn">Explore the Shop</a>
+</div>

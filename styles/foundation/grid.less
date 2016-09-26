@@ -1,0 +1,16 @@
+//============================================================================
+// 12-Column Responsive Grid System
+//============================================================================
+
+.generate-grid-system(12);
+.generate-grid-system(@n, @i: 1) when (@i =< @n) {
+   @width :  @i / @n * 100%;
+
+   .col-@{i}
+   {
+      float: left;
+      width: @width;
+      padding: 0 12px;
+   }
+   .generate-grid-system(@n, (@i + 1));
+}

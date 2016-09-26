@@ -13,6 +13,9 @@ const staticOptions = {
 
 const app = express()
 
+const blackAngusData = require('./data/blackangus')
+const tagliereData = require('./data/tagliere')
+
 //=======================================================
 // Template Engine
 //=======================================================
@@ -31,6 +34,7 @@ tmplEnv.express(app)
 app.use('/plugins', express.static('plugins', staticOptions), notFoundHandler)
 app.use('/assets', express.static(`assets`, staticOptions), notFoundHandler)
 app.use('/dist', express.static(`dist`, staticOptions), notFoundHandler)
+app.use('/views', express.static(`views`, staticOptions), notFoundHandler)
 
 //=======================================================
 // Stripe Routes
@@ -51,8 +55,16 @@ app.get('/stripe/connect/callback', function(req, res, next) {
 // Application Routes
 //=======================================================
 
-app.get('*', function(req, res, next) {
-   res.render('index.html')
+app.get('*/blackangus', function(req, res, next) {
+   res.render('index.html', { page: 'vendor', vendor: blackAngusData })
+})
+
+app.get('*/tagliere', function(req, res, next) {
+   res.render('index.html', { page: 'vendor', vendor: tagliereData })
+})
+
+app.get('*/:page', function(req, res, next) {
+   res.render('index.html', { page: req.params.page })
 })
 
 //=======================================================

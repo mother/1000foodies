@@ -1,0 +1,19 @@
+{% include 'vendor/nav.html' %}
+{% include 'vendor/cover.html' %}
+
+<div class="page-main">
+   <div id="mo-vendor-news" class="c100 xs-hide sm-hide"></div>
+   {% include 'vendor/news/index.html' %}
+   {% include 'vendor/about.html' %}
+   {% include 'vendor/products/index.html' %}
+   {% include 'vendor/contact.html' %}
+</div>
+
+{% include 'vendor/footer.html' %}
+
+
+<script>
+   $(function() {
+      $('body').addClass('{{ vendor.theme.name }}')
+   })
+</script>

@@ -1,0 +1,60 @@
+<div class="vendor-contact" style="background: {{ vendor.theme.primary_color }}">
+   <div id="mo-vendor-map-container" class="vendor-contact-map"></div>
+   <div class="vendor-contact-info page-main-padding clearfix">
+      <h2>Contact Us</h2>
+      <div class="c100 body">
+         <br/>
+
+         {% if vendor.contact.address1 %}
+            <h4 class="contact-title">Address</h4>
+         {% endif %}
+
+         <div id="vendor-address">
+            {% if vendor.contact.address1 %}
+               {{ vendor.contact.address1 }}<br/>
+            {% endif %}
+
+            {% if vendor.contact.address2 %} {{ vendor.contact.address2 }}<br/>{% endif %}
+
+            {% if vendor.contact.city %}
+               {{ vendor.contact.city }}{% if vendor.contact.state or vendor.contact.country %}, {% endif %}
+            {% endif %}
+
+            {% if vendor.contact.state %}
+               {{ vendor.contact.state }}{% if vendor.contact.country %}, {% endif %}
+            {% endif %}
+
+            {% if vendor.contact.country %}
+               {{ vendor.contact.country }}<br/>
+            {% endif %}
+
+            {% if vendor.contact.zip %}{{ vendor.contact.zip }}{% endif %}
+         </div>
+
+         <br/>
+         {% if vendor.contact.email %}
+            <h4 class="contact-title">Email</h4>{{ vendor.contact.email }}<br/><br/>
+         {% endif %}
+         {% if vendor.contact.phone %}
+            <h4 class="contact-title">Phone</h4>{{ vendor.contact.phone }}<br/><br/>
+         {% endif %}
+
+         <div class="hide">
+         {% if locations[0].hours %}
+            {# TODO: Dumb Hack #}
+            {% set day_map = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'] %}
+
+            <h4 class="contact-title">Store Hours</h4>
+            {% for hour_data in locations[0].hours %}
+               {{ day_map[hour_data.day] }}
+
+               {# TODO: new_date1 and new_date2 are hacks #}
+               {{ new_date1|date('startOf', 'day')|date('add', hour_data.start, 'seconds')|date('h:mma') }} -
+               {{ new_date2|date('startOf', 'day')|date('add', hour_data.end, 'seconds')|date('h:mma') }}<br/>
+            {% endfor %}
+         {% endif %}
+         <br/><br/>
+         </div>
+      </div>
+   </div>
+</div>

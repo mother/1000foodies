@@ -1,0 +1,32 @@
+.rounded(@radius: 2px) {
+   -webkit-border-radius: @radius;
+   -moz-border-radius: @radius;
+   border-radius: @radius;
+}
+
+.transition(@timing) {
+   -webkit-transition: @timing;
+   -moz-transition: @timing;
+   -o-transition: @timing;
+   -ms-transition: @timing;
+   transition: @timing;
+}
+
+.box-shadow(@outset) {
+   -webkit-box-shadow: @outset;
+   -moz-box-shadow: @outset;
+   -ms-box-shadow: @outset;
+   box-shadow: @outset;
+}
+
+.opacity(@opacity) {
+   opacity: @opacity / 100;
+   filter: ~"alpha(opacity=@{opacity})";
+}
+
+.linear-gradient(@direction, @gradient1, @gradient2) {
+   background: -webkit-linear-gradient(@direction, @gradient1, @gradient2);
+   background: -moz-linear-gradient(@direction, @gradient1, @gradient2);
+   background: -o-linear-gradient(@direction, @gradient1, @gradient2);
+   background: linear-gradient(@direction, @gradient1, @gradient2);
+}

@@ -1,0 +1,71 @@
+.theme_two {
+   .page-logo {
+      position: fixed;
+      top: 24px;
+      left: 18px;
+      z-index: 60;
+
+      img {
+         display: inline-block;
+         height: 54px;
+      }
+   }
+
+   .page-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 108px;
+      line-height: 108px;
+      z-index: 55;
+      background: #fff;
+      .box-shadow(0 0 30px rgba(0,0,0,0.2));
+      text-align: center;
+      font-family: 'Roboto Slab';
+
+      a {
+         display: inline-block;
+         color: #333;
+         text-transform: uppercase;
+         font-weight: bold;
+         font-size: 11px;
+         line-height: 14px;
+         letter-spacing: 2px;
+         margin: 0 24px;
+         padding-left: 8px;
+         padding-bottom: 40px;
+
+         &:hover {
+            border-bottom: 6px solid #666;
+         }
+      }
+
+      .active {
+         border-bottom: 6px solid #333;
+      }
+   }
+
+   .page-account {
+      position: fixed;
+      top: 0;
+      right: 30px;
+      height: 84px;
+      line-height: 102px;
+      z-index: 66;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 11px;
+      letter-spacing: 4px;
+
+      .badge {
+         text-align: center;
+         padding: 0 9px;
+         background: #000;
+         color: #fff;
+         .rounded(6px);
+         letter-spacing: 0;
+         margin-left: 6px;
+      }
+   }
+}
