@@ -5,58 +5,28 @@
       <meta name="apple-mobile-web-app-capable" content="yes"/>
       <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
       <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+      <!-- Following is included this way for convenience -->
+      <!-- Assumed to be bundled and uglified depending on your build process -->
       <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-      <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-      <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Alegreya:400,700,900' rel='stylesheet' type='text/css'>
-      <link href='https://fonts.googleapis.com/css?family=Catamaran:400,300,500,600,700' rel='stylesheet' type='text/css'>
-      <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,700' rel='stylesheet' type='text/css'>
       <link rel="stylesheet" href="/dist/index.css">
       <script type="text/javascript" src="/plugins/jquery.min.js"></script>
       <script type="text/javascript" src="/plugins/jquery.scrollTo.min.js"></script>
+      <script type="text/javascript" src="/plugins/jquery.serializejson.min.js"></script>
+      <script type="text/javascript" src="/plugins/jquery.color.picker.min.js"></script>
       <script type="text/javascript" src="/plugins/scrollToggle.js"></script>
       <script type="text/javascript" src="/plugins/modal.js"></script>
       <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyDBbZHRAtjz391I5csDywd5B1wauSFKV9w"></script>
+      <!-- End Dependencies -->
    </head>
-   <body>
+   <body {% if vendor.theme.name %}class="{{ vendor.theme.name }}"{% endif %}>
       <div id="viewport">
          {% set file='./'+page+'/index.html' %}
          {% include file %}
       </div>
-      <div id="account">
-         <div class="nav">
-            {% if me %}
-               <a class="show-user-popover">
-                  {{ user.name.full }}
-                  <i class="icon ion-android-arrow-dropdown"></i>
-               </a>
-            {% else %}
-               <!-- <a href="/login" class="static-link">Login</a> -->
-            {% endif %}
-         </div>
-         {% if me %}
-            <div class="user-popover mi-popover">
-               <a href="/settings">
-                  <span class="info">
-                     Store Settings
-                  </span>
-               </a>
-               <a href="/profile/edit">
-                  <span class="info">
-                     Edit Profile
-                  </span>
-               </a>
-               <a href="/logout">
-                  <span class="info">
-                     Logout
-                  </span>
-               </a>
-            </div>
-         {% endif %}
-      </div>
-
       <script src="/dist/index.js"></script>
-
    </body>
 </html>

@@ -1,0 +1,21 @@
+//======================================================================
+// Padding
+//======================================================================
+
+.generate-padding(30);
+.generate-padding(@n, @i: 1) when (@i =< @n) {
+   @name: @i * 6;
+   .padding-@{name},
+   {
+      padding: @name * 1px !important;
+   }
+   .generate-padding(@n, (@i + 1));
+}
+
+.padding-none { padding: 0 !important; }
+.padding-bottom-none { padding-bottom: 0 !important; }
+.padding-top-none  { padding-top: 0 !important; }
+.padding-top-bottom-none { padding-top: 0 !important; padding-bottom: 0 !important; }
+.padding-right-none  { padding-right: 0 !important; }
+.padding-left-none  { padding-left: 0 !important; }
+.padding-left-right-nonw { padding-left: 0 !important; padding-right: 0 !important; }

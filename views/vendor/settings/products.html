@@ -1,0 +1,41 @@
+<div class="ui-titlebar">
+   <div class="title">Products</div>
+   <div class="actions">
+      <div class="action-close-modal">
+         <i class="icon ion-android-close"></i>
+      </div>
+   </div>
+</div>
+
+<div class="ui-actionbar">
+   <div class="ui-navbar">
+      <a class="active">Active</a>
+      <a>Unpublished</a>
+      <a>Archived</a>
+   </div>
+   <div class="actions">
+      <div class="action-show-na-setting ui-btn">Add Product</div>
+   </div>
+</div>
+
+<div class="ui-subview">
+   <table class="ui-table">
+      <tr>
+         <th>Product Name</th>
+         <th>Price</th>
+         <th>Stock</th>
+         <th></th>
+      </tr>
+      {% for product in vendor.products %}
+         <tr>
+            <td>{{ product.name }}</td>
+            <td>${{ product.price }}</td>
+            <td>2 items remaining</td>
+            <td>
+               <a href="">Edit</a>
+               <a href="">Delete</a>
+            </td>
+         </tr>
+      {% endfor %}
+   </table>
+</div>

@@ -47,7 +47,7 @@ function showModalPreloader() {
       scaleAndPositionModal.apply(self);
    });
 
-   $('.ui-modal').on('touchend click','.mui-close-modal, .ma-close-modal', function(e) {
+   $('.ui-modal').on('touchend click','.action-close-modal', function(e) {
       e.stopPropagation();
       self.close();
    });

@@ -1,0 +1,33 @@
+<div class="ui-titlebar">
+   <div class="title">About Us</div>
+   <div class="actions">
+      <div class="action-close-modal">
+         <i class="icon ion-android-close"></i>
+      </div>
+   </div>
+</div>
+
+<div class="ui-actionbar">
+   <div class="actions">
+      <div class="ui-btn">Save</div>
+   </div>
+</div>
+
+<div id="foodies-about-view" class="ui-subview ui-form">
+   <div class="col-8">
+      <form class="padding-24">
+         <label>Write a description about {{ vendor.name }}</label>
+         <div class="ui-label-description">This description will show up on the 'About Us' section of your website<br/><br/></div>
+         <textarea name="about.body" rows="16">{{ vendor.about.body }}</textarea>
+      </form>
+   </div>
+   <div class="col-4">
+      <div class="padding-24 padding-left-none">
+         <label>About Us Image (optional)</label>
+         <div class="ui-label-description">You can optionally upload a photo that will be shown in the About Us section of your website<br/><br/></div>
+
+         <div class="ui-dropzone"></div>
+         <div class="ui-dropzone-button">Upload Photo</div>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="ui-titlebar">
+   <div class="title">Design & Appearance</div>
+   <div class="actions">
+      <div class="action-close-modal">
+         <i class="icon ion-android-close"></i>
+      </div>
+   </div>
+</div>
+
+<div class="ui-actionbar">
+   <div class="actions">
+      <div class="ui-btn">Save</div>
+   </div>
+</div>
+
+<form id="organization-settings-form" class="ui-subview ui-form">
+   <div class="col-6">
+      <div class="padding-24 padding-right-none">
+         <label>Your Logo</label>
+         <div class="ui-label-description">
+            This logo will be used in many places throughout the platform<br/>
+         </div>
+
+         <div class="ui-dropzone"></div>
+         <div class="ui-dropzone-button">Upload Image</div>
+      </div>
+
+   </div>
+   <div class="col-6">
+      <div class="padding-24">
+         <label>Theme</label>
+         <div class="ui-label-description">Select a theme for your website. More themes are coming soon!</div>
+         <select name="theme.name">
+            <option value="theme_one">Theme 1</option>
+            <option value="theme_two">Theme 2</option>
+         </select>
+
+         <br/><br/>
+
+         <label>Primary Colour</label>
+         <div class="ui-label-description">
+            Select a custom primary colour of your liking. It will be used throughout the website layout
+         </div>
+         <input type="text" name="theme.primary_color" class="primary-color" value={{ vendor.theme.primary_color }}>
+      </div>
+   </div>
+</form>

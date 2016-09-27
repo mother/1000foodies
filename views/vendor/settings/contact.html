@@ -1,0 +1,75 @@
+<div class="ui-titlebar">
+   <div class="title">Contact Us</div>
+   <div class="actions">
+      <div class="action-close-modal">
+         <i class="icon ion-android-close"></i>
+      </div>
+   </div>
+</div>
+
+<div class="ui-actionbar">
+   <div class="actions">
+      <div class="ui-btn">Save</div>
+   </div>
+</div>
+
+<div class="ui-subview ui-form">
+   <form>
+      <div class="col-6">
+         <div class="padding-24 prn">
+            <label>Address</label>
+            <input type="text" name="contact.address1" value="{{ vendor.locations.address1 }}">
+            <input type="text" name="contact.address2" value="{{ vendor.locations.address2 }}">
+
+            <label>City</label>
+            <input type="text" name="contact.city"  value="{{ vendor.contact.city }}">
+
+            <label>Postal Code</label>
+            <input type="text" name="contact.zip" value="{{ vendor.contact.zip }}">
+
+            <label for="contact.state">Province</label>
+            <select name="contact.state">
+               <option value="AB" {% if vendor.contact.state == 'AB' %}selected{% endif %}>Alberta</option>
+               <option value="BC" {% if vendor.contact.state == 'BC' %}selected{% endif %}>British Columbia</option>
+               <option value="MB" {% if vendor.contact.state == 'MB' %}selected{% endif %}>Manitoba</option>
+               <option value="NB" {% if vendor.contact.state == 'NB' %}selected{% endif %}>New Brunswick</option>
+               <option value="NL" {% if vendor.contact.state == 'NL' %}selected{% endif %}>Newfoundland and Labrador</option>
+               <option value="NS" {% if vendor.contact.state == 'NS' %}selected{% endif %}>Nova Scotia</option>
+               <option value="NT" {% if vendor.contact.state == 'NT' %}selected{% endif %}>Northwest Territories</option>
+               <option value="NU" {% if vendor.contact.state == 'NU' %}selected{% endif %}>Nunavut</option>
+               <option value="ON" {% if vendor.contact.state == 'ON' %}selected{% endif %}>Ontario</option>
+               <option value="PE" {% if vendor.contact.state == 'PE' %}selected{% endif %}>Prince Edward Island</option>
+               <option value="QC" {% if vendor.contact.state == 'QC' %}selected{% endif %}>Quebec</option>
+               <option value="SK" {% if vendor.contact.state == 'SK' %}selected{% endif %}>Saskatchewan</option>
+               <option value="YT" {% if vendor.contact.state == 'YT' %}selected{% endif %}>Yukon</option>
+            </select>
+
+            <label for="contact.country">Country</label>
+            <select name="contact.country">
+               <option value="CA" {% if vendor.contact.country == 'CA' %}selected{% endif %}>Canada</option>
+            </select>
+
+            <label for="">Phone Number</label>
+            <div class="ui-label-description">Primary phone number you would like customers to contact you at</div>
+            <div class="col-4 padding-left-none">
+               <input type="text" name="contact.areacode" placeholder="Area Code" value="{{ vendor.contact.areacode }}">
+            </div>
+            <div class="col-8 padding-right-none">
+               <input type="text" name="contact.phone" placeholder="Phone Number" value="{{ vendor.contact.phone }}">
+            </div>
+
+            <label for="">Email Address</label>
+            <div class="ui-label-description">Primary email address you would like customers to contact you at</div>
+            <input type="text" name="contact.email" value="{{ vendor.contact.email }}">
+         </div>
+      </div>
+      <div class="col-6">
+         <div class="padding-24 padding-left-none">
+            <label for="">Store Operating Hours</label>
+            <div class="ui-label-description">List the days of the week and hours your store is open.</div>
+
+            (Operating Hours Widget went here / Not Available)
+         </div>
+      </div>
+   </form>
+</div>

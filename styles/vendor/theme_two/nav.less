@@ -1,5 +1,5 @@
 .theme_two {
-   .page-logo {
+   .vendor-logo {
       position: fixed;
       top: 24px;
       left: 18px;
@@ -11,7 +11,7 @@
       }
    }
 
-   .page-nav {
+   .vendor-nav {
       position: fixed;
       top: 0;
       left: 0;
@@ -46,26 +46,32 @@
       }
    }
 
-   .page-account {
+   .vendor-account {
       position: fixed;
       top: 0;
       right: 30px;
       height: 84px;
       line-height: 102px;
-      z-index: 66;
-      text-transform: uppercase;
+      z-index: 61;
       font-weight: bold;
       font-size: 11px;
       letter-spacing: 4px;
 
+      a {
+         margin-left: 24px;
+         text-transform: uppercase;
+      }
+
       .badge {
          text-align: center;
-         padding: 0 9px;
+         padding: 2px 9px;
          background: #000;
          color: #fff;
          .rounded(6px);
-         letter-spacing: 0;
+         letter-spacing: 1px;
          margin-left: 6px;
+         font-family: 'Roboto';
+         font-size: 9px;
       }
    }
 }
