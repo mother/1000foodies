@@ -1,0 +1,73 @@
+<div class="ui-form padding-48 pbn">
+   <div class="col-12">
+      Enter some basic information about your store. You can always change these details later.<br/><br/>
+   </div>
+   <div class="col-5 padding-left-none">
+      <div class="col-12">
+         <div class="form-label">Store Name</div>
+         <input type="text" name="vendor.name">
+
+         <div class="form-label">Email Address</div>
+         <div class="ui-label-description">The email address you would like customers to contact you at</div>
+         <input type="text" name="vendor.contact[email]">
+
+      </div>
+      <div class="col-12">
+         <div class="form-label">Phone Number</div>
+         <div class="ui-label-description">Primary phone number you would like customers to contact you at</div>
+      </div>
+
+      <div class="col-5">
+         <input type="text" name="contact.areacode" placeholder="Area Code" value="{{ contact.areacode }}">
+      </div>
+      <div class="col-7">
+         <input type="text" name="contact.phone" placeholder="Phone Number" value="{{ contact.phone }}">
+      </div>
+   </div>
+   <div class="col-7 padding-right-none">
+      <div class="col-12">
+         <div class="form-label">Store Address</div>
+         <input type="text" name="vendor.contact[address1]">
+         <input type="text" name="vendor.contact[address2]">
+      </div>
+
+      <div class="col-6">
+         <div class="form-label">City</div>
+         <input type="text" name="vendor.contact[city]">
+
+         <div class="form-label">State/Province</div>
+         <select name="vendor.contact[state]">
+            <option value="AB">Alberta</option>
+            <option value="BC">British Columbia</option>
+            <option value="MB">Manitoba</option>
+            <option value="NB">New Brunswick</option>
+            <option value="NL">Newfoundland and Labrador</option>
+            <option value="NS">Nova Scotia</option>
+            <option value="NT">Northwest Territories</option>
+            <option value="NU">Nunavut</option>
+            <option value="ON">Ontario</option>
+            <option value="PE">Prince Edward Island</option>
+            <option value="QC">Quebec</option>
+            <option value="SK">Saskatchewan</option>
+            <option value="YT">Yukon</option>
+         </select>
+      </div>
+
+      <div class="col-6">
+         <div class="form-label">Postal/Zip Code</div>
+         <input type="text">
+
+         <div class="form-label">Country</div>
+         <select name="vendor.contact[country]">
+            <option value="CA">Canada</option>
+         </select>
+      </div>
+
+   </div>
+</div>
+
+<div class="ui-toolbar">
+   <div class="actions">
+      <div id="create-vendor" class="ui-btn">Next</div>
+   </div>
+</div>

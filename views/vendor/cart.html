@@ -1,0 +1,34 @@
+<div class="cart-overlay"></div>
+<div class="cart">
+   <div class="titlebar">
+      <i class="icon ion-android-close action-hide-cart"></i>
+      <div class="title">Your Cart</div>
+   </div>
+   <div id="shopping-cart-items" class="subview">
+      <div data-variant-id="{{ id }}" class="cart-tile">
+         <div class="thumbnail"></div>
+         <span class="info">
+            <span class="title">Product Name (Variant Name)</span>
+            <span class="price">$100.00</span>
+            <span class="action-remove-cart-item remove-item">Remove</span>
+         </span>
+      </div>
+   </div>
+   <div class="toolbar">
+      <div class="subtotal">
+         <table width="100%">
+            <tr>
+               <td>
+                  Subtotal
+               </td>
+               <td>
+                  $<span id="cart-subtotal">0.00</span>
+               </td>
+            </tr>
+         </table>
+      </div>
+      <div class="action">
+         <a class="cart-btn" href="/checkout">Checkout</a>
+      </div>
+   </div>
+</div>

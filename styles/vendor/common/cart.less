@@ -1,0 +1,183 @@
+.cart {
+   position: fixed;
+   top: 0;
+   right: -360px;
+   bottom: 0;
+   width: 360px;
+   z-index: 99999;
+   background: #fff;
+   .transition(400ms);
+   .opacity(50);
+   overflow: auto;
+   visibility: hidden;
+
+   .show-cart & {
+      right: 0px !important;
+      .opacity(100);
+      visibility: visible;
+   }
+
+   .titlebar {
+      float: left;
+      position: relative;
+      width: 100%;
+      height: 60px;
+      line-height: 60px;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+
+      .title {
+         display: inline-block;
+         text-transform: uppercase;
+         font-size: 12px;
+         font-weight: 700;
+         letter-spacing: 5px;
+         color: #222;
+      }
+
+      .icon {
+         position: absolute;
+         top: 0;
+         left: 0;
+         height: 60px;
+         line-height: 60px;
+         width: 60px;
+         text-align: center;
+         color: #666;
+         cursor: pointer;
+
+         &:hover {  background: #333; }
+      }
+   }
+
+   .subview {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      bottom: 120px;
+      overflow: auto;
+   }
+
+   .toolbar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 120px;
+      background: #ddd;
+   }
+
+   .subtotal {
+      float: left;
+      width: 100%;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      font-family: 'proxima-nova';
+      border-bottom: 1px solid #ccc;
+      color: #444;
+
+      td { padding: 12px 18px; }
+   }
+
+   .action {
+      float: left;
+      width: 100%;
+      text-align: center;
+      padding: 12px;
+   }
+
+   .cart-btn {
+      float: left;
+      width: 100%;
+      height: 48px;
+      line-height: 48px;
+      background: #222;
+      color: #fff;
+
+      &:hover { background: #444; }
+   }
+}
+
+//-----------------------------------------------------------------
+// Tile
+//-----------------------------------------------------------------
+
+.cart-tile {
+   float: left;
+   position: relative;
+   width: 100%;
+   border-bottom: 1px solid #ddd;
+
+   .thumbnail {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      width: 78px;
+      height: 78px;
+      background: #000;
+      overflow: hidden;
+   }
+
+   .info {
+      float: left;
+      min-height: 90px;
+      padding: 18px 18px 18px 108px;
+      font-size: 13px;
+      line-height: 18px;
+      color: #444;
+   }
+
+   .title {
+      float: left;
+      width: 100%;
+      font-weight: bold;
+   }
+
+   .price {
+      float: left;
+      width: 100%;
+   }
+
+   .remove-item {
+      float: left;
+      color: #666;
+      border: 2px solid #ccc;
+      padding: 2px 12px;
+      margin-top: 6px;
+      text-transform: uppercase;
+      font-size: 10px;
+      font-weight: 700;
+      font-family: 'proxima-nova';
+      cursor: pointer;
+
+      &:hover {
+         border-color: #888;
+      }
+   }
+}
+
+//-----------------------------------------------------------------
+// Cart Overlay
+//-----------------------------------------------------------------
+
+.cart-overlay {
+   position: fixed;
+   left: 0;
+   right: 0;
+   height: 100%;
+   z-index: 99998;
+   background: #111;
+   .opacity(0);
+   .transition(400ms);
+   top: 0;
+   visibility: hidden;
+
+   .show-cart & {
+      top: 0;
+      .opacity(95);
+      visibility: visible;
+   }
+}

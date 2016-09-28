@@ -1,0 +1,16 @@
+<div class="latest-news-banner clearfix">
+   <div class="col-12">
+      <h2>Latest News</h2>
+   </div>
+   {% for page in vendor.articles %}
+      <a class="action-show-news banner-column">
+         <span class="date">
+            {{ page.published.date }}
+         </span>
+         {{ page.title }}
+      </a>
+   {% endfor %}
+   <div class="col-12">
+      <a class="action-show-news vendor-cover-btn">See all News</a>
+   </div>
+</div>

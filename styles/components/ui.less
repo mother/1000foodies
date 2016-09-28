@@ -1,5 +1,5 @@
 .ui-btn {
-   float: left;
+   display: inline-block;
    height: 36px;
    line-height: 36px;
    padding: 0 24px;
@@ -75,7 +75,7 @@
       &:hover { background-color: #eee; }
    }
 
-   label {
+   .form-label, label {
       display: block;
       font-weight: 500;
       margin-bottom: 6px;
@@ -218,6 +218,18 @@
    a {
       color: #44ad9b;
       text-decoration: underline;
+   }
+}
+
+.ui-toolbar {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   padding: 18px;
+
+   .actions {
+      float: right;
    }
 }
 

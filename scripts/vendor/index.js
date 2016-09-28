@@ -1,5 +1,7 @@
 const nunjucks = require('nunjucks')
+const Cart = require('./cart.js')
 const Map = require('./map.js')
+const News = require('./news.js')
 const Product = require('./product.js')
 const Settings = require('./settings')
 
@@ -10,8 +12,9 @@ function Vendor() {}
 //=================================================================
 
 Vendor.prototype.render = function() {
+   Cart.render()
    Map.render({
-      zoom: 6,
+      zoom: 10,
       address: $('#vendor-address').text().trim(),
       container: "#mo-vendor-map-container"
    })
@@ -31,6 +34,7 @@ Vendor.prototype.setupDelegates = function() {
       .on('click', '.action-goto-about', gotoAbout)
       .on('click', '.action-goto-products', gotoProducts)
       .on('click', '.action-goto-contact', gotoContact)
+      .on('click', '.action-show-news', News.render)
       .on('click', '.action-view-product', Product.render)
       .on('click', '.action-show-settings', Settings.render)
 

@@ -17,7 +17,8 @@ Product.prototype.render = function() {
 }
 
 Product.prototype.setupDelegates = function() {
-
+   $('.product-view')
+      .on('click', '.action-add-to-cart', this.addToCart.bind(this))
 }
 
 Product.prototype.addToCart = function() {

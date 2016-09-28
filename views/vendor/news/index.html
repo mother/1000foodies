@@ -1,16 +1,18 @@
-<div class="latest-news-banner clearfix">
+<div class="news-modal-view">
    <div class="col-12">
-      <h2>Latest News</h2>
+      <h2>News & Blog</h2>
+      <br/><br/>
    </div>
-   {% for page in vendor.articles %}
-      <a class="ma-show-news banner-column">
-         <span class="date">
-            {{ page.published.date }}
-         </span>
-         {{ page.title }}
-      </a>
-   {% endfor %}
-   <div class="col-12">
-      <a class="ma-show-news vendor-cover-btn">See all News</a>
+   <div id="news-article-container">
+      {% for article in vendor.articles %}
+         <div class="news-modal-article">
+            <span class="date">
+               {% if article.published.date %} {{ article.published.date }}
+               {% else %} {{ article.updated.date }} {% endif %}
+            </span>
+            <span class="title">{{ article.title }}</span>
+            {{ article.body }}
+         </div>
+      {% endfor %}
    </div>
 </div>

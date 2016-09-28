@@ -53,6 +53,8 @@ app.get('/stripe/connect/callback', function(req, res, next) {
 
 //=======================================================
 // Application Routes
+// The following are not real Routes
+// They are for demonstration convenience only
 //=======================================================
 
 app.get('*/blackangus', function(req, res, next) {
@@ -61,6 +63,10 @@ app.get('*/blackangus', function(req, res, next) {
 
 app.get('*/tagliere', function(req, res, next) {
    res.render('index.html', { page: 'vendor', vendor: tagliereData })
+})
+
+app.get('*/checkout', function(req, res, next) {
+   res.render('index.html', { page: 'vendor/checkout' })
 })
 
 app.get('*/:page', function(req, res, next) {

@@ -1,0 +1,50 @@
+<div id="home-header">
+   <a href="/">
+      <img src="/assets/images/logo.png" class="logo" alt="1000 Foodies">
+   </a>
+</div>
+
+<div class="join-view">
+   <div class="container">
+      <div class="tabs">
+         <div class="tab active">
+            <span class="label">
+               <span class="number">1</span>
+               Create Account
+            </span>
+         </div>
+         <div class="tab">
+            <span class="label">
+               <span class="number">2</span>
+               Store Info
+            </span>
+         </div>
+         <div class="tab">
+            <span class="label">
+               <span class="number">3</span>
+               Finish
+            </span>
+         </div>
+      </div>
+
+      <form id="join-form">
+         <div id="join-subview-container">
+            <div class="join-subview">
+               {% include 'join/account.html' %}
+            </div>
+            <div class="join-subview">
+               {% include 'join/info.html' %}
+            </div>
+            <div id="mo-join-finish-container" class="join-subview">
+               {% include 'join/finish.html' %}
+            </div>
+         </div>
+      </form>
+
+
+
+   </div>
+</div>
+<style>
+   #account { display: none; }
+</style>

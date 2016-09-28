@@ -28,16 +28,19 @@ module.exports = {
    },
    articles: [{
       title: 'New Website Launched!',
+      body: 'Il Tagliere Salumeria is a family owned salumeria nestled in the foothills of Caledon, Ontario. The salumeria has been built on top of the remnants of an old family farm and has been converted into a state-of-the-art facility to manufacture and cure a wide ride of air-dried cured meats.',
       published: {
          date: "Feb 28, 2016"
       }
    },{
       title: 'Salumeria Il Tagliere wins Platinum Award',
+      body: 'Il Tagliere Salumeria is a family owned salumeria nestled in the foothills of Caledon, Ontario. The salumeria has been built on top of the remnants of an old family farm and has been converted into a state-of-the-art facility to manufacture and cure a wide ride of air-dried cured meats.',
       published: {
          date: 'Feb 28, 2016'
       }
    },{
       title: 'Salumeria Il Tagliere is featured on Block Talk',
+      body: 'Il Tagliere Salumeria is a family owned salumeria nestled in the foothills of Caledon, Ontario. The salumeria has been built on top of the remnants of an old family farm and has been converted into a state-of-the-art facility to manufacture and cure a wide ride of air-dried cured meats.',
       published: {
          date: 'Feb 28, 2016'
       }
